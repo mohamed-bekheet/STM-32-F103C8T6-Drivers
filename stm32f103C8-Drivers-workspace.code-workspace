@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"name": "Test-Drivers-project",
+			"path": "Test-Drivers-project"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"stm32f103xb.h": "c",
+			"core_cm3.h": "c"
+		}
+	}
+}

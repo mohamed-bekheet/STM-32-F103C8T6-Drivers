@@ -2,7 +2,7 @@
  * RCC_program.c
  *
  *  Created on: Aug 3, 2022
- *      Author: Ahmed Magdy
+ *      Author: mohamed moustafa aly ::: mohamed.bekheet2023@gmail.com
  */
 
 #include "STD_TYPES.h"
@@ -45,7 +45,8 @@ void RCC_voidInit(void)
 
 }
 
-void RCC_voidPeripheralClockEnable(u8 Copy_u8BusName, Peripherals_t Copy_u8PerphiralName)
+
+void RCC_voidPeripheralClockEnable(u8 Copy_u8BusName, Peripherals_e Copy_u8PerphiralName)
 {
 	switch(Copy_u8BusName)
 	{
@@ -55,7 +56,7 @@ void RCC_voidPeripheralClockEnable(u8 Copy_u8BusName, Peripherals_t Copy_u8Perph
 	}
 }
 
-void RCC_voidPeripheralClockDisable(u8 Copy_u8BusName, Peripherals_t Copy_u8PerphiralName)
+void RCC_voidPeripheralClockDisable(u8 Copy_u8BusName, Peripherals_e Copy_u8PerphiralName)
 {
 	switch(Copy_u8BusName)
 	{

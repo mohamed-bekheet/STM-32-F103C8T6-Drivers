@@ -10,7 +10,7 @@ void USART_voidInit(USART_MODULES module,u16 baudRate){
 		USART1.CR1.UE=1;//enable usart
 		USART1.CR1.M = WORD_LENGHT;//select word length in the frame
 		USART1.CR2.STOP = STOP_BITS; //stop bits
-		USART1.BRR =  baudRate  //select baudrate
+		USART1.BRR =  baudRate;  //select baudrate
 		break;
 	case USART_2:
 			break;

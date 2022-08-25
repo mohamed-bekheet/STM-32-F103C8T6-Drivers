@@ -2,7 +2,7 @@
  * GPIO_program.c
  *
  *  Created on: Aug 4, 2022
- *      Author: Omar Gamal
+ *      Author: mohamed moustafa aly ::: mohamed.bekheet2023@gmail.com
  */
 
 #include "STD_TYPES.h"
@@ -79,7 +79,7 @@ void GPIO_voidSetPinValue(u8 Copy_u8Port, u8 Copy_u8Pin, bool Copy_u8PinValue){
 	case GPIO_PORTA:
 		if(Copy_u8PinValue){
 			SET_BIT(REG_GPIO_PORTA->ODR,Copy_u8Pin);	// non-atomic access
-			//REG_GPIO_PORTA->BSRR = 0x00010001;		// atomic access
+			//REG_GPIO_PORTA->BSRR = 1<<Copy_u8PinValue;//0x00010001;		// atomic access
 		}else{
 			CLR_BIT(REG_GPIO_PORTA->ODR,Copy_u8Pin);
 		}

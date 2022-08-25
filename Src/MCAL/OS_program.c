@@ -2,7 +2,7 @@
  * OS_program.c
  *
  *  Created on: Aug 14, 2022
- *      Author: Omar Gamal
+ *      Author: mohamed moustafa aly ::: mohamed.bekheet2023@gmail.com
  */
 
 
@@ -24,13 +24,14 @@ u32 TickCount = 0;
 
 void Scheduler(void){
 
-	for(u8 i = 0; i < OS_NUMBER_OF_TASKS; i++){
-		if((OS_Tasks[i].State == OS_TASK_READY)){
+	for(u8 i = 0; i < OS_NUMBER_OF_TASKS; i++){//loop for tasks
+
+		if((OS_Tasks[i].State == OS_TASK_READY)){//Check task ready state
 			if(OS_Tasks[i].InitialDelay == 0){
 				OS_Tasks[i].InitialDelay = OS_Tasks[i].Periodicity-1;
 				OS_Tasks[i].Fptr();
 			}else{
-				OS_Tasks[i].InitialDelay--;
+				OS_Tasks[i].InitialDelay--;//start after time delay(number multiple of OS_TICK_TIME)
 			}
 		}
 
